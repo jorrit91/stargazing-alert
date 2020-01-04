@@ -13,7 +13,6 @@
     "lint:list": "eslint */**/*.js --fix",
     "lint": "eslint */**/*.js --fix",
     "start": "nodemon dist/index.js",
-    "heroku-postbuild": "node build --prod",
     "start:prod": "nodemon src/index.ts"
   },
   "keywords": [],
