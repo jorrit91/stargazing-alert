@@ -6,7 +6,7 @@ require("dotenv").config()
 
 export const app = async () => {
   console.log("running the app")
-  schedule.scheduleJob("* * 23 * 0", async function() {
+  schedule.scheduleJob({ hour: 23, dayOfWeek: 0 }, async function() {
     const d = new Date()
     console.log(`checking the weather, current day is ${d.getDate()}`)
     const weatherIsOkay: "nogo" | "go" | false = await fetch(
